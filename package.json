@@ -1,0 +1,6 @@
+{ "name": "ea-lubho", "private": true, "type": "module",
+  "scripts": {
+    "test": "node test/auth.test.mjs && node test/v5.test.mjs && node test/eas.test.mjs && node test/hosting.test.mjs && node test/backend.test.mjs && node test/e2e-agent.test.mjs && node test/site.test.mjs",
+    "test:ui": "python3 test/ui.test.py"
+  },
+  "engines": { "node": ">=22" } }

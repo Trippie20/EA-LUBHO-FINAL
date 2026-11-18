@@ -1,0 +1,30 @@
+# EA LUBHO — Cloudflare Pages configuration (new project; nothing copied from the old site).
+# This file contains NO secrets. SETUP_TOKEN and CREDENTIAL_KEY are entered privately in the
+# Cloudflare dashboard (see README.md, step 6).
+
+name = "ea-lubho-2"
+pages_build_output_dir = "public"
+compatibility_date = "2025-09-01"
+
+# Database. Create it first (README step 3), then replace the placeholder below with the
+# database ID Cloudflare shows. The ID is an identifier, not a secret.
+[[d1_databases]]
+binding = "DB"
+database_name = "ea-lubho"
+database_id = "REPLACE-WITH-YOUR-D1-DATABASE-ID"
+migrations_dir = "migrations"
+
+# Settings that are safe to keep in the repository.
+[vars]
+# Real-money broker accounts stay locked until you decide otherwise and set this to "true".
+ALLOW_LIVE_ACCOUNTS = "false"
+# New registrations wait for Super Admin approval. The Super Admin can change this later in
+# the app (Super Admin > Settings); this is only the starting value.
+REQUIRE_APPROVAL_DEFAULT = "true"
+
+# OPTIONAL: private file storage in R2 (needs a payment method on the Cloudflare account even
+# though the free allowance is generous). Without it, EX5 files are stored in D1 (about 3 MB each).
+# Uncomment after creating a bucket called "ea-lubho-files":
+# [[r2_buckets]]
+# binding = "FILES"
+# bucket_name = "ea-lubho-files"
