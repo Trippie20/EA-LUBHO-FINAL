@@ -1,0 +1,44 @@
+/* Additions for the connected version of EA LUBHO. The original look is kept; these only add new pieces. */
+[hidden]{display:none!important}
+body:not(.is-admin) [data-admin-only]{display:none!important}
+.loadbar{position:fixed;top:0;left:0;right:0;height:3px;z-index:60;background:linear-gradient(90deg,transparent,var(--blue),transparent);background-size:40% 100%;background-repeat:no-repeat;animation:lb 1s linear infinite;opacity:0;transition:opacity .15s}
+.loadbar.on{opacity:1}@keyframes lb{from{background-position:-40% 0}to{background-position:140% 0}}
+.toast.error{background:#3a1a24;border-color:#a8445a;color:#ffc1cb}
+.toast{white-space:pre-line}
+.auth{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:18px;overflow:auto;background:radial-gradient(ellipse at 70% -15%,#123555 0,transparent 42%),var(--bg)}
+.auth.open{display:flex}
+.auth-card{width:min(430px,100%);background:linear-gradient(145deg,#0e2032,#0b1a2a);border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--shadow)}
+.auth-card .brand{padding:0 0 18px}
+.auth-card h2{margin:0 0 4px;font-size:20px}.auth-card .sub{color:var(--muted);font-size:12px;margin-bottom:16px}
+.auth-card form{display:grid;gap:12px}.auth-card .btn{width:100%}
+.auth-switch{margin-top:14px;text-align:center;color:var(--muted);font-size:12px}
+.auth-switch button{background:none;border:0;color:var(--cyan);font-weight:750;padding:0 3px}
+.form-error{color:#ffb3bd;background:#2d1822;border:1px solid #6d3042;border-radius:10px;padding:9px 11px;font-size:12px}
+.field textarea{width:100%;border:1px solid #28455d;border-radius:10px;background:#081827;color:#f1f8fc;padding:11px;outline:none;min-height:80px;resize:vertical;font:inherit}
+.field .hint{color:var(--muted);font-size:10px}
+.field.full{grid-column:1/-1}
+.modal.wide{width:min(780px,100%)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.tabs button{border:1px solid var(--line);background:#0c2032;color:#9eb2c3;border-radius:30px;padding:7px 13px;font-weight:700;font-size:12px}
+.tabs button.active{background:#12304a;color:#fff;border-color:#2b6b93}
+.mono{font-family:ui-monospace,Consolas,monospace}
+.secret-box{display:flex;gap:8px;align-items:center;border:1px dashed #2f6f94;background:#08202f;border-radius:12px;padding:12px;margin:10px 0;word-break:break-all}
+.secret-box code{flex:1;font-size:14px;color:#bdf0ff}
+.count-dot{display:inline-block;min-width:17px;height:17px;border-radius:9px;background:var(--red);color:#fff;font-size:10px;font-weight:800;line-height:17px;text-align:center;margin-left:6px;padding:0 4px}
+.actions-cell{white-space:nowrap}.actions-cell .btn{padding:6px 9px;font-size:12px;margin:1px}
+.row-card.unread{border-color:#2b6b93;background:#0d2236}
+.sub{color:var(--muted);font-size:11px}
+.status-pill i.ok{background:var(--green)}.status-pill i.bad{background:var(--red)}
+.search{max-width:260px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:12px;margin:8px 0}.kv dt{color:var(--muted)}.kv dd{margin:0;word-break:break-word}
+.stat-note.bad{color:var(--red)}
+.more-list{display:grid;gap:8px}.more-list button{text-align:left}
+.badge.err{background:#38242d;color:#ff9aa7}
+.badge.sim{background:#3b2e52;color:#d7b9ff}
+td .sub{display:block;max-width:300px}
+@media(max-width:720px){.actions-cell{white-space:normal}.auth-card{padding:20px}}
+
+/* charts */
+svg.chart{width:100%;height:auto;display:block;margin-top:6px}
+svg.chart .ax{stroke:#28455d;stroke-width:1}
+svg.chart .tx{fill:#8fa7bb;font-size:11px;font-family:inherit}

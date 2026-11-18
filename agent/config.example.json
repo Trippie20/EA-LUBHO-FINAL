@@ -1,0 +1,9 @@
+{
+  "serverUrl": "https://YOUR-PROJECT.pages.dev",
+  "token": "PASTE-THE-HOST-TOKEN-SHOWN-ONCE-IN-SUPER-ADMIN",
+  "mt5InstallDir": "C:\\Program Files\\MetaTrader 5",
+  "dataDir": "data",
+  "defaultSymbol": "EURUSD",
+  "defaultPeriod": "M1",
+  "startupWaitSeconds": 25
+}
